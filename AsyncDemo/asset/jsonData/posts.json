@@ -1,0 +1,24 @@
+[{
+    "name": "User 1",
+    "image": "https://static.toiimg.com/photo/72975551.cms",
+    "postTitle": "Post 1",
+    "date": "January 21 ,2021",
+    "postText": "Lorem Ipsum ……..."
+},
+{
+    "name": "User 2",
+    "image": "https://static.toiimg.com/photo/72975551.cms",
+    "postTitle": "Post 2",
+    "date": "January 21 ,2021",
+    "postText": "Lorem Ipsum ……..."
+},
+{
+    "name": "User 3",
+    "image": "https://static.toiimg.com/photo/72975551.cms",
+    "postTitle": "Post 3",
+    "date": "January 21 ,2021",
+    "postText": "Lorem Ipsum ……..."
+}
+
+
+]
