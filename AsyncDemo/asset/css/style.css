@@ -1,0 +1,14 @@
+#load {
+    width: 100%;
+  
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hide {
+    display: none !important;
+  }
+  

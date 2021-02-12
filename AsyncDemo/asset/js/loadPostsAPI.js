@@ -1,12 +1,7 @@
 // UI Vars 
 const postDiv3 = document.getElementById('thePosts');
-let spinner = `
-<div class="ui segment">
-<p></p>
-<div class="ui active dimmer">
-  <div class="ui loader"></div>
-</div>
-</div>` 
+const spinner = document.querySelector("#load")
+const blog = document.querySelector(".blogs-container");
 
 //Load Every thing ....
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,34 +12,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //load post from fake api function 
-function load_fromPlaceHolder() {
-     //open the request
-   fetch('https://jsonplaceholder.typicode.com/posts')
-   .then(function(res) {  return res.json(); //return the JSON Promise
-      })
-      .then(function(posts) {
-          //iterate over each post [100 posts]
-          let output = '';
-          posts.forEach(function(post) {
-              output += `<div class="item">
-              <div class="image"> <img src="https://static.toiimg.com/photo/72975551.cms"> </div>
-              <div class="content">
-                    <a class="header" href="#" id="bTitle"> ${posts.title} </a>
+// function load_fromPlaceHolder() {
+//      //open the request
+//    fetch('https://jsonplaceholder.typicode.com/posts')
+//    .then(function(res) {  return res.json(); //return the JSON Promise
+//       })
+//       .then(function(posts) {
+//           //iterate over each post [100 posts]
+//           let output = '';
+//           posts.forEach(function(post) {
+//               output += `<div class="item">
+//               <div class="image"> <img src="https://static.toiimg.com/photo/72975551.cms"> </div>
+//               <div class="content">
+//                     <a class="header" href="#" id="bTitle"> ${posts.title} </a>
                     
                         
-                        <span>By: <a href="#" id="bAuthor"> ${posts.body}</a></span>
+//                         <span>By: <a href="#" id="bAuthor"> ${posts.body}</a></span>
                     
                     
-                    <div class="extra"> <a class="ui floated basic violet button" href="#">Read More</a> </div>
-              </div>
-         </div>              `;  // same code as previous with few update
-          });
-          postDiv3.innerHTML = output;
-      })
-      .catch(function(err) {     console.log(err);
-      });
+//                     <div class="extra"> <a class="ui floated basic violet button" href="#">Read More</a> </div>
+//               </div>
+//          </div>              `;  // same code as previous with few update
+//           });
+//           postDiv3.innerHTML = output;
+//       })
+//       .catch(function(err) {     console.log(err);
+//       });
 
-}
+// }
 //async await
  async function load_fromPlaceHolder_new() {
     //open the request 
@@ -57,7 +52,7 @@ function load_fromPlaceHolder() {
 
 }
 function loadDataNew() {
-   setTimeout(()=>{
+   
     load_fromPlaceHolder_new().then(function(posts) {
         //iterate over each post [100 posts]
         
@@ -85,14 +80,19 @@ function loadDataNew() {
 `;
         });
         postDiv3.innerHTML = output;
+        setTimeout(()=>{
+        spinner.classList.add("hide");
+        blog.classList.remove("hide");
+        },5000)
+        
         
     }) .catch(function(err) {
         console.log(err);
     });
-   },5000, postDiv3.innerHTML = spinner)
+   }
        
 
-}
+
 
 // UI Variables 
 const timerDemo = document.getElementById("timerDemo");

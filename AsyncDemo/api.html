@@ -8,6 +8,7 @@
     <!-- Semantic CDN -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+     <link rel="stylesheet" href="./asset/css/style.css" />
 </head>
 
 <body id="body">
@@ -18,6 +19,7 @@
           Home
         </a>
         <a class="item" href="api.html">
+        
             API
           </a>
         <div class="right menu">
@@ -32,7 +34,7 @@
     <div class="ui bottom attached segment">
         <p></p>
     </div>
-
+    
     <div class="ui container">
 
 
@@ -44,9 +46,14 @@
             </div>
             <p id="timerDemo">Time Will Load Here ...</p>
         </div>
-
+        <div class="ui segment" id="load">
+<p></p>
+<div class="ui active dimmer" >
+  <div class="ui loader" ></div>
+</div>
+</div>` 
         <!-- All Blogs  -->
-        <div class="ui top attached segment">
+        <div class="ui top attached segment  hide blogs-container">
 
             <div class="ui green message">
                 <i class="star icon"></i> All Blogs From JSON placeholder API
